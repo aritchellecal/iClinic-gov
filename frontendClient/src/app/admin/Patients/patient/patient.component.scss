@@ -1,0 +1,46 @@
+.header{
+  margin: -16px;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 64px;
+  height:54px;
+  background: #fff;
+
+
+}
+.controls {
+    position: absolute;
+    right: 70px;
+    top: 10px;
+    width: 450px;
+    padding: 4px 0 12px 12px;
+}
+.controls > button{
+  margin-left: 14px;
+}
+.fab{
+
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #d60157;
+  border-radius: 50%;
+  right: 22px;
+  top: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    // font-weight: bold;
+    color: #fff;
+  }
+
+}

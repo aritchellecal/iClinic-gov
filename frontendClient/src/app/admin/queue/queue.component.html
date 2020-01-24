@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="serving-container">
+    <div mdcHeadline5 class="font-heading">Now Serving</div>
+      <div [mdcElevation]="2" class="serving-card">
+        <div class="serving-header">
+            <div   class="img-serving">
+              <div [mdcElevation]="2">
+                  <img src="../../../assets/images/maleSad.jpg" alt="Avatar" class="avatar">
+              </div>
+            </div>
+            <div class="serving-name-tag">
+              <div class="name-tag-content">
+                  <div>Alexander Summer</div>
+                  <div>68, Male <b>AB+</b></div>
+                  <div>
+                    <span>Profile</span>  |
+                    <span> Medical History</span>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div>
+          <div class="detail-content">
+              <div>Major Complaint</div>
+              <div>Runny Nose for almost 3 weeks</div>
+          </div>
+          <div class="svg-line">
+              <svg width="1.5" height="120" viewBox="0 0 1.5 120">
+                <line id="Line_1" data-name="Line 1" y2="120" transform="translate(0.75)" fill="none" stroke="rgba(223,15,106,0.4)" stroke-width="1.5"/>
+              </svg>
+          </div>
+          <div class="pvs-content">
+              <div><span>Weight</span><span class="m-r44">75 kg</span></div>
+              <div><span>Pulse Rate</span><span class="m-r44">150</span></div>
+              <div><span>Respiratory Rate</span><span class="m-r44">35</span></div>
+              <div><span>Blood Pressure</span><span class="m-r44">80/60</span></div>
+              <div><span>Body Temperature</span><span class="m-r44">37.5</span></div>
+              <div><span>02 Sat</span><span class="m-r44">98</span></div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div cdkDropList class="queue-container dropping-list" (cdkDropListDropped)="onDrop($event)">
+    <div mdcHeadline5 class="font-heading">Patient Queue (16)</div>
+    <div [mdcElevation]="1"  class="drag" *ngFor="let movie of movies" cdkDrag>
+      <section>
+        <div [mdcElevation]="2" class="img-avatar">
+            <img src="../../../assets/images/girlAvatar.jpg" alt="Avatar" class="queue-avatar">
+        </div>
+        <div class="name-tag">
+          <div>{{movie}}</div>
+          <div>
+            <span>Profile</span>  |
+            <span> Medical History</span>
+          </div>
+        </div>
+        <div class="queue-number">
+            <span>
+              16
+            </span>
+          </div>
+      </section>
+      <section></section>
+    </div>
+  </div>
+</div>
+

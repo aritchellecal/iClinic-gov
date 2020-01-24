@@ -1,0 +1,50 @@
+.box{
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+
+  input{
+    box-sizing: border-box;
+    width:25%;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    box-shadow: none;
+    border-radius: 4px;
+    border: 1px solid #d5cdcd;
+    color: #958383;
+    font-size: medium;
+    // outline: none;
+    // border: none;
+    // border-bottom:1px solid #999 ;
+  }
+  input:focus{
+    border-color: #0375ff;
+  }
+
+
+  form div{
+    position: relative;
+  }
+
+  form div label{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    color: #999;
+    pointer-events: none;
+    transition: .5s;
+    font-size: 14px;
+  }
+
+  form input:focus + label,
+  form input:valid + label {
+    top: -14px;
+    left: 5px;
+    color: rgb(7, 88, 194);
+    font-size: 12px;
+    background: #fff;
+  }
+
+}
+
+

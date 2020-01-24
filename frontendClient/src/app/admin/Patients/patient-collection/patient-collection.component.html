@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="content">
+    <ul>
+      <li *ngFor="let patient of patients$ | async" >
+        <div class="profile-section">
+            <ngx-avatar [name]="patient.fullName" size="40"></ngx-avatar>
+            <div class="patient-info">
+              <div>{{patient.fullName}}</div>
+              <div class="contrast" mdcBody2>{{patient.age}}, {{patient.gender}}</div>
+            </div>
+        </div>
+        <div>
+          <div>Last Visit: January 30, 2019</div>
+          <div>29 days ago </div>
+        </div>
+        <div>
+          <div class="control">
+            <span routerLink={{patient.id}}>Profile</span> |
+            <span (click)="openConsultationDialog(patient.id,patient.fullName)">Consultation</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

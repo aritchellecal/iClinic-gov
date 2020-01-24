@@ -1,0 +1,44 @@
+<div class="form-container" [mdcElevation]="5">
+  <div class="form-header" mdcHeadline6>Patient Information</div>
+  <mdc-list-divider></mdc-list-divider>
+  <div fxLayout="column" class="form-content" fxLayoutGap="24px">
+    <form [formGroup]="addPatientForm" fxLayout="column" class="form-content" fxLayoutGap="24px" autocomplete="off">
+      <div class="input-box" fxLayout="row" fxLayoutGap="14px">
+          <mdc-text-field class="input" label="Student ID"  autocomplete="off"  formControlName="patientID" dir='rtl'></mdc-text-field>
+          <mdc-text-field class="input" label="Last Name"  autocomplete="off"  formControlName="lastName"></mdc-text-field>
+          <mdc-text-field class="input" label="First Name" formControlName="firstName"></mdc-text-field>
+          <mdc-text-field class="input" label="Middle Name" formControlName="middleName"></mdc-text-field>
+          <mdc-text-field class="input" label="Nick Name" formControlName="exName"></mdc-text-field>
+      </div>
+      <div class="input-box" fxLayout="row" fxLayoutGap="14px">
+        <mdc-text-field type="date" class="input"  formControlName="bDate">
+          <mdc-icon mdcTextFieldIcon leading clickable>event</mdc-icon>
+        </mdc-text-field>
+        <mdc-text-field label="Age" class="input" dir='rtl' formControlName="age"></mdc-text-field>
+        <mdc-text-field label="Gender" class="input" formControlName="gender"></mdc-text-field>
+        <mdc-text-field label="Contact #" class="input" dir='rtl' formControlName="contactNo"></mdc-text-field>
+      </div>
+
+      <div mdcHeadline6>Additional Information</div>
+
+      <div class="input-box" fxLayout="row" fxLayoutGap="14px">
+          <mdc-text-field label="Civil Status" class="input" formControlName="civilStatus"></mdc-text-field>
+          <mdc-text-field label="Religion" class="input" formControlName="religion"></mdc-text-field>
+          <mdc-text-field label="Course" class="input" formControlName="course"></mdc-text-field>
+          <mdc-text-field label="Year Section" class="input" formControlName="section"></mdc-text-field>
+      </div>
+
+      <div mdcHeadline6>Address Information</div>
+
+      <div class="input-box" fxLayout="row" fxLayoutGap="14px">
+          <mdc-text-field label="Barangay" class="input" formControlName="barangay"></mdc-text-field>
+          <mdc-text-field label="City/Municipality" class="input" formControlName="city"></mdc-text-field>
+          <mdc-text-field label="State / Province " class="input" formControlName="state"></mdc-text-field>
+          <mdc-text-field label="Postal / Zip Code" class="input" dir='rtl' formControlName="zcode"></mdc-text-field>
+      </div>
+    </form>
+    <div class="form-control" fxLayout="row" fxLayoutAlign="end center">
+        <button mdc-button raised (click)="onSubmit()">Save</button>
+    </div>
+  </div>
+</div>

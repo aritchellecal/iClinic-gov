@@ -1,0 +1,35 @@
+*{
+  box-sizing: border-box;
+}
+.form-container{
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+
+  // border: 1px solid rgba($color: #000000, $alpha: .3);
+}
+.form-header{
+  width: 100%;
+  height: 44px;
+}
+
+.form-content{
+    padding-top: 14px;
+}
+.form-controls{
+  height: 64px;
+}
+.input-box{
+  height: 45px;
+
+  .input{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+
+  }
+  .input:focus{
+    background-color: transparent;
+  }
+}
+

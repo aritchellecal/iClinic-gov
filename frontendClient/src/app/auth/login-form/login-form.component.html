@@ -1,0 +1,21 @@
+<div fxLayout="row" class="container">
+  <div fxLayout="column" fxLayoutAlign="center center" fxFlex="40" class="fSection">
+    <div mdcHeadline4 style="font-weight: 600; letter-spacing: .1em;">Welcome to iClinic</div>
+    <div mdcHeadline6>Technological University of the Philippines-Visayas</div>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="center center"  fxFlex="60"  class="sSection">
+      <div mdcHeadline4 style="font-weight: 300; color: #1363B2;margin-bottom:36px;margin-right:450px;"> Login</div>
+    <form [formGroup]="loginForm">
+    <mdc-form-field >
+      <div>
+          <mdc-text-field label="user name" style="width: 550px;" formControlName="username" autocomplete="off"></mdc-text-field>
+          <mdc-helper-text #standardHelper validation *ngIf="getErrorMessage()">{{getErrorMessage()}}</mdc-helper-text>
+      </div>
+      <div>
+        <mdc-text-field label="Password" type="password"  style="width: 550px;margin-top: 24px;" formControlName="password" autocomplete="off"></mdc-text-field>
+      </div>
+    </mdc-form-field>
+  </form>
+      <button (click)="onSubmit()" mdc-button primary raised style="padding:0 24px 0 24px;margin-left: 450px;margin-top: 64px;">Sign in</button>
+  </div>
+</div>

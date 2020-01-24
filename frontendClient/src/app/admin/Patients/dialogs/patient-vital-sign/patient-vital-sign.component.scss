@@ -1,0 +1,23 @@
+.dialog-container{
+  max-width: 0 !important;
+  min-width: 700px;
+  height: 65%;
+}
+.dialog-title{
+  color: rgb(7, 88, 194);
+}
+.dialog-footer{
+  padding: 12px 0;
+  color: blue !important;
+  padding-right: 24px;
+}
+.pvs-time,
+.pvs-date{
+  margin-left: 24px !important;
+  height: 40px !important;
+}
+form{
+  padding-top: 30px;
+  padding-left: 18px;
+}
+

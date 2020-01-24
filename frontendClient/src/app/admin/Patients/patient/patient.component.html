@@ -1,0 +1,13 @@
+<div>
+  <div class="header" [mdcElevation]="1" mdcBody1 mdc-color--primary>
+    <div class="fab" [mdcElevation]="5"><span>+</span></div>
+    <div class="controls">
+        <button mdc-button dense outlined routerLink="new">Add New</button>
+        <button mdc-button dense raised routerLink="list">Patient List</button>
+        <button mdc-button dense raised routerLink="new">Routine Check-up</button>
+      </div>
+  </div>
+  <div style="padding-top: 24px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>

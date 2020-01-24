@@ -1,0 +1,43 @@
+<mdc-dialog clickOutsideToClose='false'>
+  <mdc-dialog-container >
+    <mdc-dialog-surface class="dialog-container">
+      <mdc-dialog-title class="dialog-title">Patient Vital Signs</mdc-dialog-title>
+      <mdc-list-divider></mdc-list-divider>
+      <mdc-dialog-content>
+        <div class="box">
+          <form [formGroup]="addVitalSignsForm">
+            <div>
+              <input type="text" formControlName="bodyTemp" required>
+              <label>Body Temperature</label>
+              <mdc-text-field class="pvs-date" formControlName="bodyTempDate" type="date" label="Date Taken" outlined></mdc-text-field>
+              <mdc-text-field class="pvs-time" formControlName="bodyTempTime"  type="time" label="Time"  outlined></mdc-text-field>
+            </div>
+            <div>
+                <input type="text" required formControlName="resRate">
+                <label>Respiration Rate</label>
+                <mdc-text-field class="pvs-date" formControlName="resRateDate" type="date" label="Date Taken" outlined></mdc-text-field>
+                <mdc-text-field class="pvs-time" formControlName="resRateTime" type="time" label="Time" outlined></mdc-text-field>
+            </div>
+            <div>
+                <input type="text" required formControlName="pulseRate">
+                <label>Pulse Rate</label>
+                <mdc-text-field class="pvs-date" formControlName="pulseRateDate" type="date" label="Date Taken" outlined></mdc-text-field>
+                <mdc-text-field class="pvs-time" formControlName="pulseRateTime" type="time" label="Time" outlined></mdc-text-field>
+            </div>
+            <div>
+                <input type="text" required formControlName="bloodPres">
+                <label>Blood Pressure</label>
+                <mdc-text-field class="pvs-date" formControlName="bloodPresDate" type="date" label="Date Taken" outlined></mdc-text-field>
+                <mdc-text-field class="pvs-time" formControlName="bloodPresTime" type="time" label="Time" outlined></mdc-text-field>
+            </div>
+          </form>
+        </div>
+      </mdc-dialog-content>
+      <mdc-list-divider></mdc-list-divider>
+      <mdc-dialog-actions class="dialog-footer">
+        <button mdcDialogButton mdcDialogAction="close">cancel</button>
+        <button mdcDialogButton mdcDialogAction="accept" (click)="onSubmit()">Add to Queue</button>
+      </mdc-dialog-actions>
+    </mdc-dialog-surface>
+  </mdc-dialog-container>
+</mdc-dialog>

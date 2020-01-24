@@ -1,0 +1,13 @@
+/dist
+/backendServer/public
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/backendServer/node_modules
+/backendServer/vendor
+/frontendClient/node_modules
+/backendServer/node_modules
+

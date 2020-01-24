@@ -1,0 +1,67 @@
+<div class="container"  [mdcElevation]="1">
+  <div class="section">
+    <div class="content-section">
+      <div>
+        <section>
+          <div><img class="avatar" src="../../../../assets/images/avatar.webp" alt="Avatar"></div>
+        </section>
+        <section class="p-info">
+          <div>{{ (patient$ | async).fullName }}</div>
+          <div mdcBody2>{{(patient$ | async).age}}, {{(patient$ | async).gender}}, <strong> AB+</strong> </div>
+          <div mdcBody2>{{(patient$ | async).contactNo}}</div>
+          <div mdcBody2>{{(patient$ | async).course}}</div>
+        </section>
+      </div>
+
+      <div>
+          <div class="p-chief-complaint">
+              <div class="caption-header"> Recent Medications</div>
+              <span mdcBody2>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</span>
+              <span mdcBody2></span>
+          </div>
+
+          <div class="p-medical-history" style="display: flex; flex-direction: column;">
+              <div class="caption-header">Medical History</div>
+              <span mdcBody2>Severe Penicillin Allergy</span>
+              <span mdcBody2>Type 2 Diabetes</span>
+          </div>
+      </div>
+    </div>
+
+    <div class="content-section mid-section" id="style-scroll">
+      <section><div class="contrast" mdcHeadline6>Allergies</div></section>
+      <section>
+        <div class="contrast" mdcHeadline6>Vital Signs</div>
+
+        <div class="box">
+          <form>
+            <div>
+              <input type="text" required>
+              <label>Body Temperature</label>
+            </div>
+            <div>
+              <input type="text" required>
+              <label>Respiration Rate</label>
+            </div>
+            <div>
+              <input type="text" required>
+              <label>Pulse Rate</label>
+            </div>
+            <div>
+              <input type="text" required>
+              <label>Blood Pressure</label>
+            </div>
+          </form>
+        </div>
+
+      </section>
+      <section><div class="contrast" mdcHeadline6>SOAP</div></section>
+      <section><div class="contrast" mdcHeadline6><Main>Medication</Main></div></section>
+    </div>
+    <div class="content-section">
+
+
+    </div>
+  </div>
+  <div class="footer"></div>
+</div>

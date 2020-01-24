@@ -1,0 +1,21 @@
+.container{
+  width: 100%;
+  font-family: "montserrat", sans-serif;
+  text-align: center;
+  color: #343434;
+}
+.container h1{
+  font-size:  160px;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 20px;
+}
+
+.container a{
+  text-decoration: none;
+  background: #e55039aa;
+  color: #fff;
+  padding: 12px 36px;
+  display: inline-block;
+  // border-radius: 8px;
+}

@@ -1,0 +1,41 @@
+<mdc-top-app-bar fixed >
+    <mdc-top-app-bar-row>
+      <mdc-top-app-bar-section align="start" title="">
+        <button mdcTopAppBarNavIcon (click)="drawer.open = !drawer.open">
+          <mdc-icon>menu</mdc-icon>
+        </button>
+      </mdc-top-app-bar-section>
+      <mdc-top-app-bar-section style="z-index: 999;" align="end">
+        <mdc-icon mdcTopAppBarActionItem>search</mdc-icon>
+        <mdc-icon mdcTopAppBarActionItem>notifications_none</mdc-icon>
+        <mdc-icon mdcTopAppBarActionItem (click)="profileMenu.open = !profileMenu.open">more_vert</mdc-icon>
+        <div mdcMenuSurfaceAnchor #menuAnchor>
+          <mdc-menu style="z-index: 999;" #profileMenu [anchorElement]="menuAnchor">
+            <mdc-list>
+              <mdc-list-item>My Profile</mdc-list-item>
+              <mdc-list-divider></mdc-list-divider>
+              <mdc-list-item>Sign out</mdc-list-item>
+            </mdc-list>
+          </mdc-menu>
+        </div>
+      </mdc-top-app-bar-section>
+    </mdc-top-app-bar-row>
+</mdc-top-app-bar>
+<div mdcTopAppBarFixedAdjust></div>
+<div style="height: 100%">
+  <mdc-drawer drawer="dismissible" #drawer style="top: 64px; position: fixed;">
+    <mdc-drawer-header title="Drawer Title" subtitle="Subtitle">
+    </mdc-drawer-header>
+    <mdc-drawer-content>
+      <mdc-list>
+        <mdc-list-item *ngFor="let link of links" routerLink="{{link.weblink}}">
+          <mdc-icon mdcListItemGraphic>{{link.icon}}</mdc-icon>{{link.label}}
+        </mdc-list-item>
+      </mdc-list>
+    </mdc-drawer-content>
+  </mdc-drawer>
+  <div mdcDrawerAppContent style="padding: 16px; height: 100%;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
